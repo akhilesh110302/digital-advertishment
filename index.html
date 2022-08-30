@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Digital Advertisement</title>
+  <link href="favicon.png" rel="icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="font-awesome.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header id="header">
+    <div class="container">
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#intro">Home</a></li>
+          <li><a href="#speakers">Solution</a></li>
+          <li><a href="#schedule">Steps</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="header-button"><a href="login.php" target="_blank">LOGIN</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section id="intro">
+    <div class="intro-container  fadeIn">
+      <h1 class="mb-4 pb-0">Digital <span>Advertisement</span> <br> Target future customers and fans.</h1>
+      <a href="abstract.php" class="about-btn" target="_blank">Create ads</a>
+    </div>
+  </section>
+
+  <main id="main">
+    <section id="speakers" class=" fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our solutions</h2>
+          <p>One idea multiple solutions</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="1.jpg" alt="Speaker 1" class="img-fluid">
+              <div class="details">
+                <h3><a href="speaker-details.html">Commercial Screens</a></h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="2.png" alt="Speaker 2" class="img-fluid">
+              <div class="details">
+                <h3><a href="speaker-details.html">Food Menu Screens</a></h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="3.jpg" alt="Speaker 3" class="img-fluid">
+              <div class="details">
+                <h3><a href="speaker-details.html">Gym Guide Screens</a></h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="4.webp" alt="Speaker 4" class="img-fluid">
+              <div class="details">
+                <h3><a href="speaker-details.html">Movie Screens</a></h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="5.jpg" alt="Speaker 5" class="img-fluid">
+              <div class="details">
+                <h3><a href="speaker-details.html">Workplace Screens</a></h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="6.jpg" alt="Speaker 6" class="img-fluid">
+              <div class="details">
+                <h3><a href="speaker-details.html">Welcome Screens</a></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="schedule" class="section-with-bg">
+      <div class="container  fadeInUp">
+        <div class="section-header">
+          <h2>Steps</h2>
+          <p>How to create ad?</p>
+        </div>
+
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" href="#day-1" role="tab" data-toggle="tab">Upload image/video</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#day-2" role="tab" data-toggle="tab">Prepare Playlist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#day-3" role="tab" data-toggle="tab">Create ad</a>
+          </li>
+        </ul>
+
+        <div class="tab-content row">
+
+          <!-- Schdule Day 1 -->
+          <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
+            <div class="row schedule-item">
+              <div class="col-md-12">
+                <div >
+                  <img width="1100" src="s1.png" alt="Willow Trantow">
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- End Schdule Day 1 -->
+
+          <!-- Schdule Day 2 -->
+          <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
+
+           
+
+            <div class="row schedule-item">
+              <div class="col-md-12">
+                <div >
+                  <img width="1100" src="s2.png" alt="Willow Trantow">
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- End Schdule Day 2 -->
+
+          <!-- Schdule Day 3 -->
+          <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-3">
+
+            <div class="row schedule-item">
+              <div class="col-md-12">
+                <div >
+                  <img width="1100" src="s3.png" alt="Willow Trantow">
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- End Schdule Day 2 -->
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="contact" class="section-bg  fadeInUp">
+
+      <div class="container">
+
+        <div class="section-header">
+          <h2>Contact Us</h2>
+        </div>
+
+        <div class="form">
+          <div id="sendmessage">Your message has been sent. Thank you!</div>
+          <div id="errormessage"></div>
+          <form onsubmit="event.preventDefault()" method="post" role="form" class="contactForm">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+              <div class="validation"></div>
+            </div>
+            <div class="text-center"><button type="submit" onclick="mail()">Send Message</button></div>
+            <span class="text-center" style="color:green;display: none;font-size: 20px;" id="mail">Sent!!!</span>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 col-md-12 footer-info">
+            <p style="    font-size: 40px;
+            font-weight: 500;padding-bottom: 30px;">Digital Advertisement</p>
+            <p>Digital advertising is the practice of delivering promotional content to users through various online and digital channels. It leverages mediums such as social media, email, search engines, mobile apps, affiliate programs and websites to show advertisements and messages to audiences.</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#sepakers">Solution</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#schedule">Steps</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              4PJ9+R64, <br>
+              Near Malvan Mandir Via Magdalla Port<br>
+              Dumas Rd, Surat, Gujarat 395007 <br>
+              <strong>Phone:</strong> 9584226556<br>
+              <strong>Email:</strong> digitaladvertisment@gmail.com<br>
+            </p>
+
+            <div class="social-links">
+              <a href="https://www.twitter.com/" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.facebook.com/" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.instagram.com/" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="https://www.google.com/" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="https://www.linkedin.com/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </footer>
+   <script src="jquery.min.js"></script>
+  <script src="jquery-migrate.min.js"></script> 
+  <script src="easing.min.js"></script>
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+
+  <script>
+    function mail(){
+      let mail=document.getElementById('mail');
+      mail.style.display="block";
+      // setTimeout( mail.style.display="none", 3000);
+    }
+   
+  </script>
+</body>
+
+</html>
