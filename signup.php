@@ -1,0 +1,272 @@
+<?php
+require('conn.php');
+$error='';
+session_start();
+if(isset($_POST['submit'])){
+	$name=$_POST['name'];
+	$email=$_POST['email'];
+	$password=$_POST['password'];
+    $cPassword=$_POST['cpassword'];
+
+    if ($password!=$cPassword) {
+        $error='Confirm password not matched';
+
+    }
+	$sql= "insert into users(name,email,password) values('" . $_POST['name'] . "','" . $_POST['email'] . "','" . $_POST['password'] . "')";
+	$res=mysqli_query($conn,$sql);
+	if($res==1){
+	
+			header('location:login.php');
+		
+	}else{
+		$error='User not created';
+	}
+}
+?>
+<html>
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <style>
+         ::-webkit-scrollbar {
+            width: 8px;
+        }
+        /* Track */
+        
+         ::-webkit-scrollbar-track {
+            background: darkviolet;
+        }
+        /* Handle */
+        
+         ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+        /* Handle on hover */
+        
+         ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        
+        body {
+            background: darkviolet
+        }
+        
+        .rounded {
+            border-radius: 1rem
+        }
+        
+        .nav-pills .nav-link {
+            color: #555
+        }
+        
+        .nav-pills .nav-link.active {
+            color: white
+        }
+        
+        input[type="radio"] {
+            margin-right: 5px
+        }
+        
+        .bold {
+            font-weight: bold
+        }
+        
+        .display-6 {
+            color: whitesmoke;
+        }
+        
+        body {
+            font-family: 'Varela Round', sans-serif;
+            background: darkviolet;
+        }
+        
+        .modal-confirm {
+            color: #636363;
+            width: 325px;
+            font-size: 14px;
+        }
+        
+        .modal-confirm .modal-content {
+            padding: 20px;
+            border-radius: 5px;
+            border: none;
+        }
+        #ok{
+            background-color: darkviolet;
+        }
+        .modal-confirm .modal-header {
+            border-bottom: none;
+            position: relative;
+        }
+        
+        .modal-confirm h4 {
+            text-align: center;
+            font-size: 26px;
+            margin: 30px 0 -15px;
+        }
+        
+        .modal-confirm .form-control,
+        .modal-confirm .btn {
+            min-height: 40px;
+            border-radius: 3px;
+        }
+        
+        .modal-confirm .close {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+        }
+        
+        .modal-confirm .modal-footer {
+            border: none;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 13px;
+        }
+        
+        .modal-confirm .icon-box {
+            color: #fff;
+            position: absolute;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            top: -70px;
+            width: 95px;
+            height: 95px;
+            border-radius: 50%;
+            z-index: 9;
+            background: darkviolet;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+        }
+        
+        .modal-confirm .icon-box i {
+            font-size: 58px;
+            position: relative;
+            top: 3px;
+        }
+        
+        .modal-confirm.modal-dialog {
+            margin-top: 80px;
+        }
+        
+        .modal-confirm .btn {
+            color: #fff;
+            border-radius: 4px;
+            background: darkviolet;
+            text-decoration: none;
+            transition: all 0.4s;
+            line-height: normal;
+            border: none;
+        }
+        
+        .modal-confirm .btn:hover,
+        .modal-confirm .btn:focus {
+            background: darkviolet;
+            outline: none;
+        }
+        .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: darkviolet;
+}
+        .trigger-btn {
+            display: inline-block;
+            margin: 100px auto;
+        }
+        
+	.about-btnn {
+		font-family: "Raleway", sans-serif;
+		font-weight: 500;
+		font-size: 14px;
+		letter-spacing: 1px;
+		display: inline-block;
+		padding: 12px 32px;
+		border-radius: 0px;
+		transition: 0.5s;
+		line-height: 1;
+		margin: 10px;
+		/* color: #fff; */
+		-webkit-animation-delay: 0.8s;
+		animation-delay: 0.8s;
+		border: 2px solid darkviolet;
+		background: darkviolet;
+		color: white ;
+		text-decoration: none;
+        width: 100%;
+	}
+
+	.about-btnn:hover {
+		background: none;
+		color: black;
+
+	}
+    </style>
+</head>
+
+<body classname="snippet-body" data-new-gr-c-s-check-loaded="14.1058.0" data-gr-ext-installed="">
+    <div class="container py-5">
+        <div class="row mb-4">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-6">Registration</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 mx-auto">
+                <div class="card ">
+                    <div class="card-header">
+                    <form role="form" method="post" id="form"  >
+
+                    <div class="form-group"> <label >
+                                            <h6>User Name</h6>
+                                        </label> <input type="text" name="name" placeholder="User Name" required="" class="form-control "> </div>
+
+
+                                    <div class="form-group"> <label >
+                                            <h6>User Email</h6>
+                                        </label> <input type="text" name="email" placeholder="User Email"  type="email" required="" class="form-control "> </div>
+
+                                        
+                                    <div class="form-group"> <label >
+                                            <h6>Password</h6>
+                                        </label>
+                                        <div class="input-group"> <input type="password" name="password" placeholder="Password" class="form-control " required="">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group"> <label >
+                                            <h6>Confirm Password</h6>
+                                        </label>
+                                        <div class="input-group"> <input type="password" name="cpassword" placeholder="Confirm Password" class="form-control " required="">
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <button class="subscribe btn btn-primary btn-block shadow-sm" id="ok" name="submit" >Login</button>
+
+
+                                       
+
+                                    </div>
+                                    <div style="color: red;"><?php echo $error; ?></div>
+                               
+                                </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+
+    </div>
+    </div>
+</body>
+
+</html>
